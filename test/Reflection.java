@@ -1,6 +1,5 @@
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -99,20 +98,9 @@ public class Reflection {
             name.set(person2,"tom");//把person2的 name 设置成 “tom”
             person2.speak();
 
-
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }
 
@@ -219,7 +207,6 @@ class Person{
 
  7.根据名称获取获取所有方法(包括实现接口，但不包括继承的)：----------------------------
  private java.lang.String Person.getInfo()
-
 
  8.获取实例newInstance：----------------------------
  无参构造
